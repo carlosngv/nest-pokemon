@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  pokemondb:
+    image: mongo
+    restart: always
+    environment:
+      MONGODB_DATABASE: nest-pokemon
+    ports:
+      - 27017:27017
+    volumes:
+      - ./mongo:/data/db
